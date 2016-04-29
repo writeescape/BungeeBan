@@ -18,7 +18,7 @@ public class BanCommand extends Command {
 	private Plugin plugin;
 	
 	public BanCommand(Plugin plugin) {
-		super("ban");
+		super("sban");
 		this.plugin = plugin;
 	}
 	
@@ -35,14 +35,14 @@ public class BanCommand extends Command {
 				if (sender instanceof ProxiedPlayer) {
 					if (args.length < 1) {
 						sender.sendMessage(ChatColor.RED + "Wrong command format. <required> [optional]");
-						sender.sendMessage(ChatColor.RED + "/ban <username> [server] [reason]");
+						sender.sendMessage(ChatColor.RED + "/sban <username> [server] [reason]");
 						return;
 					}
 					player = (ProxiedPlayer) sender;
 				} else {
 					if (args.length < 2) {
 						sender.sendMessage(ChatColor.RED + "Wrong command format. <required> [optional]");
-						sender.sendMessage(ChatColor.RED + "/ban <username> <server> [reason]");
+						sender.sendMessage(ChatColor.RED + "/sban <username> <server> [reason]");
 						return;
 					}
 				}
