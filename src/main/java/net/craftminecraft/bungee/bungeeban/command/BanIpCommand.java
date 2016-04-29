@@ -17,7 +17,7 @@ public class BanIpCommand extends Command {
 	private Plugin plugin;
 
 	public BanIpCommand(Plugin plugin) {
-		super("banip");
+		super("sbanip");
 		this.plugin = plugin;
 	}
 	
@@ -34,13 +34,13 @@ public class BanIpCommand extends Command {
 					player = (ProxiedPlayer) sender;
 					if (args.length < 1) {
 						sender.sendMessage(ChatColor.RED + "Wrong command format. <required> [optional]");
-						sender.sendMessage(ChatColor.RED + "/banip <username/ip> [server] [reason]");
+						sender.sendMessage(ChatColor.RED + "/sbanip <username/ip> [server] [reason]");
 						return;
 					}
 				} else {
 					if (args.length < 2) {
 						sender.sendMessage(ChatColor.RED + "Wrong command format. <required> [optional]");
-						sender.sendMessage(ChatColor.RED + "/banip <username/ip> <server> [reason]");
+						sender.sendMessage(ChatColor.RED + "/sbanip <username/ip> <server> [reason]");
 						return;
 					}
 				}
